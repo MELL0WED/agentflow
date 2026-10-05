@@ -19,6 +19,7 @@ def main() -> None:
     args = parser.parse_args()
 
     settings = get_settings()
+    print(f"collection {settings.collection} | strategy {settings.chunk_strategy}")
     docs, questions = load_finqa(settings.data_path)
     sample = sample_questions(questions, args.n, args.seed)
     embedder = Embedder(settings.embed_model)
@@ -35,8 +36,9 @@ def main() -> None:
             doc = docs[q.doc_id]
             row = {"qid": q.qid, "retrieved": [h["index"] for h in hits]}
             for k in args.k:
-                spans = [(h["start"], h["end"]) for h in hits[:k]]
-                row[f"recall@{k}"] = evidence_recall(doc, q.gold_units, spans)
+                top = hits[:k]
+                row[f"recall@{k}"] = evidence_recall(doc, q.gold_units, [(h["start"], h["end"]) for h in top])
+                row[f"chars@{k}"] = sum(len(h["text"]) for h in top)
             rows.append(row)
     finally:
         store.close()
@@ -46,6 +48,7 @@ def main() -> None:
         values = [r[f"recall@{k}"] for r in rows if r[f"recall@{k}"] is not None]
         summary[f"recall@{k}"] = sum(values) / len(values)
         summary[f"full@{k}"] = sum(v == 1.0 for v in values) / len(values)
+        summary[f"chars@{k}"] = sum(r[f"chars@{k}"] for r in rows) / len(rows)
     summary["retrieve_p50_ms"] = percentile(latencies, 50)
     summary["retrieve_p95_ms"] = percentile(latencies, 95)
 

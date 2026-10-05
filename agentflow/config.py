@@ -3,8 +3,7 @@ from dataclasses import dataclass
 
 from dotenv import load_dotenv
 
-load_dotenv()
-
+load_dotenv(os.getenv("AGENTFLOW_ENV", ".env"))
 
 @dataclass(frozen=True)
 class Settings:

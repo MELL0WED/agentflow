@@ -1,6 +1,6 @@
 {
-  "name": "v0",
-  "created": "2026-10-05T22:36:09",
+  "name": "v1",
+  "created": "2026-10-05T22:36:28",
   "seed": 42,
   "settings": {
     "llm_base_url": "http://localhost:1234/v1",
@@ -8,9 +8,9 @@
     "llm_timeout": 120.0,
     "qdrant_url": null,
     "qdrant_path": "./qdrant_data",
-    "collection": "finqa_fixed",
+    "collection": "finqa_structured",
     "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
-    "chunk_strategy": "fixed",
+    "chunk_strategy": "structured",
     "chunk_size": 500,
     "chunk_overlap": 50,
     "top_k": 3,
@@ -18,1204 +18,1219 @@
   },
   "summary": {
     "n": 100,
-    "recall@3": 0.8725,
-    "full@3": 0.81,
-    "chars@3": 1417.12,
-    "recall@4": 0.9475,
-    "full@4": 0.9,
-    "chars@4": 1839.2,
-    "recall@5": 0.9525,
+    "recall@3": 0.8158333333333333,
+    "full@3": 0.74,
+    "chars@3": 1142.0,
+    "recall@4": 0.8858333333333333,
+    "full@4": 0.82,
+    "chars@4": 1514.21,
+    "recall@5": 0.9591666666666667,
     "full@5": 0.91,
-    "chars@5": 2238.93,
-    "retrieve_p50_ms": 36.02070000010826,
-    "retrieve_p95_ms": 41.19824499994137
+    "chars@5": 1875.26,
+    "retrieve_p50_ms": 43.41450000003988,
+    "retrieve_p95_ms": 47.49965000004295
   },
   "rows": [
     {
       "qid": "BLK/2015/page_124.pdf-1",
       "retrieved": [
+        11,
         10,
-        9,
-        5,
-        7,
-        2
+        2,
+        8,
+        7
       ],
       "recall@3": 0.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@3": 1317,
+      "recall@4": 0.6666666666666666,
+      "chars@4": 1617,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1972
     },
     {
       "qid": "ABMD/2012/page_79.pdf-2",
       "retrieved": [
-        9,
+        11,
+        10,
         6,
-        8,
-        5,
+        9,
         7
       ],
       "recall@3": 1.0,
-      "chars@3": 1425,
+      "chars@3": 875,
       "recall@4": 1.0,
-      "chars@4": 1925,
+      "chars@4": 1307,
       "recall@5": 1.0,
-      "chars@5": 2425
+      "chars@5": 1786
     },
     {
       "qid": "GS/2014/page_165.pdf-3",
       "retrieved": [
-        7,
+        9,
+        10,
         4,
-        8,
-        3,
-        0
+        11,
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 1387,
+      "chars@3": 1176,
       "recall@4": 1.0,
-      "chars@4": 1887,
+      "chars@4": 1271,
       "recall@5": 1.0,
-      "chars@5": 2387
+      "chars@5": 1695
     },
     {
       "qid": "GIS/2018/page_110.pdf-1",
       "retrieved": [
+        3,
+        4,
         2,
         1,
-        0,
-        6,
-        5
+        9
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1054,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1546,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2035
     },
     {
       "qid": "ETR/2016/page_23.pdf-3",
       "retrieved": [
-        5,
+        7,
         6,
-        3,
-        1,
-        7
+        8,
+        4,
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1413,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1864,
       "recall@5": 1.0,
-      "chars@5": 2456
+      "chars@5": 2286
     },
     {
       "qid": "CB/2010/page_103.pdf-1",
       "retrieved": [
-        0,
-        2,
-        1,
-        3
+        4,
+        7,
+        5,
+        6,
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1395,
       "recall@4": 1.0,
-      "chars@4": 1619,
+      "chars@4": 1869,
       "recall@5": 1.0,
-      "chars@5": 1619
+      "chars@5": 2324
     },
     {
       "qid": "BKNG/2016/page_33.pdf-1",
       "retrieved": [
-        0
+        1,
+        0,
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 473,
+      "chars@3": 577,
       "recall@4": 1.0,
-      "chars@4": 473,
+      "chars@4": 577,
       "recall@5": 1.0,
-      "chars@5": 473
+      "chars@5": 577
     },
     {
       "qid": "ZBH/2008/page_57.pdf-1",
       "retrieved": [
-        8,
-        7,
         9,
-        3,
-        2
+        10,
+        8,
+        11,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1394,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1804,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2163
     },
     {
       "qid": "AON/2018/page_87.pdf-3",
       "retrieved": [
-        1,
-        0,
         3,
+        1,
         2,
-        4
+        0,
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1013,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1166,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1598
     },
     {
       "qid": "MSI/2008/page_69.pdf-3",
       "retrieved": [
-        7,
+        10,
         6,
-        5,
         8,
-        9
+        9,
+        13
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
+      "recall@3": 0.5,
+      "chars@3": 1273,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1734,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2212
     },
     {
       "qid": "ADI/2010/page_80.pdf-3",
       "retrieved": [
-        7,
-        5,
         6,
-        8,
-        4
+        7,
+        9,
+        3,
+        8
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 1788,
-      "recall@5": 1.0,
-      "chars@5": 2288
+      "recall@3": 0.75,
+      "chars@3": 1210,
+      "recall@4": 0.75,
+      "chars@4": 1676,
+      "recall@5": 0.75,
+      "chars@5": 2093
     },
     {
       "qid": "ADBE/2008/page_89.pdf-3",
       "retrieved": [
         5,
-        0,
         2,
-        6,
-        1
+        1,
+        3,
+        8
       ],
-      "recall@3": 0.5,
-      "chars@3": 1500,
-      "recall@4": 0.5,
-      "chars@4": 2000,
+      "recall@3": 1.0,
+      "chars@3": 1227,
+      "recall@4": 1.0,
+      "chars@4": 1358,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1798
     },
     {
       "qid": "AWK/2013/page_122.pdf-2",
       "retrieved": [
+        10,
+        8,
         4,
-        3,
-        7,
         5,
-        0
+        7
       ],
-      "recall@3": 0.5,
-      "chars@3": 1182,
-      "recall@4": 1.0,
-      "chars@4": 1682,
-      "recall@5": 1.0,
-      "chars@5": 2182
+      "recall@3": 0.0,
+      "chars@3": 1092,
+      "recall@4": 0.0,
+      "chars@4": 1241,
+      "recall@5": 0.5,
+      "chars@5": 1588
     },
     {
       "qid": "ETR/2015/page_17.pdf-1",
       "retrieved": [
         1,
-        3,
-        6,
         2,
-        4
+        4,
+        5,
+        3
       ],
-      "recall@3": 0.5,
-      "chars@3": 1281,
+      "recall@3": 1.0,
+      "chars@3": 1162,
       "recall@4": 1.0,
-      "chars@4": 1781,
+      "chars@4": 1610,
       "recall@5": 1.0,
-      "chars@5": 2281
+      "chars@5": 2103
     },
     {
       "qid": "FIS/2012/page_48.pdf-1",
       "retrieved": [
-        0,
-        1,
         2,
-        3
+        1,
+        4,
+        3,
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 869,
       "recall@4": 1.0,
-      "chars@4": 1617,
+      "chars@4": 1299,
       "recall@5": 1.0,
-      "chars@5": 1617
+      "chars@5": 1463
     },
     {
       "qid": "TMUS/2017/page_29.pdf-3",
       "retrieved": [
-        6,
-        5,
         7,
-        4,
-        8
+        8,
+        9,
+        6,
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1175,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1379,
       "recall@5": 1.0,
-      "chars@5": 2212
+      "chars@5": 1862
     },
     {
       "qid": "ADBE/1999/page_64.pdf-1",
       "retrieved": [
         2,
-        1,
         3,
-        6,
+        7,
+        4,
         5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1122,
       "recall@4": 1.0,
-      "chars@4": 1964,
+      "chars@4": 1577,
       "recall@5": 1.0,
-      "chars@5": 2464
+      "chars@5": 2041
     },
     {
       "qid": "EOG/2018/page_75.pdf-1",
       "retrieved": [
-        0,
-        3,
         1,
-        6,
-        2
+        0,
+        4,
+        2,
+        8
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 932,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1373,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1761
     },
     {
       "qid": "MSI/2007/page_70.pdf-1",
       "retrieved": [
+        13,
+        2,
         10,
-        9,
         11,
-        0,
-        2
+        4
       ],
-      "recall@3": 1.0,
-      "chars@3": 1344,
+      "recall@3": 0.0,
+      "chars@3": 1155,
       "recall@4": 1.0,
-      "chars@4": 1844,
+      "chars@4": 1599,
       "recall@5": 1.0,
-      "chars@5": 2344
+      "chars@5": 2073
     },
     {
       "qid": "ETR/2016/page_150.pdf-1",
       "retrieved": [
         0,
+        6,
         5,
-        3,
-        4,
-        1
+        1,
+        10
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1029,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1503,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1763
     },
     {
       "qid": "PNC/2012/page_68.pdf-4",
       "retrieved": [
-        11,
-        10,
-        4,
-        12,
-        0
+        15,
+        13,
+        5,
+        14,
+        12
       ],
-      "recall@3": 0.6666666666666666,
-      "chars@3": 1500,
+      "recall@3": 0.3333333333333333,
+      "chars@3": 1398,
       "recall@4": 0.6666666666666666,
-      "chars@4": 1657,
+      "chars@4": 1781,
       "recall@5": 0.6666666666666666,
-      "chars@5": 2157
+      "chars@5": 2230
     },
     {
       "qid": "GS/2014/page_74.pdf-1",
       "retrieved": [
-        6,
-        4,
-        7,
         5,
+        9,
+        10,
+        4,
         8
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "recall@3": 0.0,
+      "chars@3": 1042,
+      "recall@4": 0.0,
+      "chars@4": 1416,
       "recall@5": 1.0,
-      "chars@5": 2414
+      "chars@5": 1832
     },
     {
       "qid": "AAL/2014/page_15.pdf-2",
       "retrieved": [
-        8,
         9,
-        7,
-        5,
-        6
+        10,
+        8,
+        6,
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 1200,
+      "chars@3": 1257,
       "recall@4": 1.0,
-      "chars@4": 1700,
+      "chars@4": 1470,
       "recall@5": 1.0,
-      "chars@5": 2200
+      "chars@5": 1887
     },
     {
       "qid": "CME/2010/page_123.pdf-5",
       "retrieved": [
+        5,
+        6,
+        4,
         2,
-        3,
-        0,
-        1,
-        4
+        0
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "recall@3": 0.5,
+      "chars@3": 1689,
+      "recall@4": 0.5,
+      "chars@4": 2189,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2490
     },
     {
       "qid": "MSI/2012/page_87.pdf-1",
       "retrieved": [
-        6,
-        7,
         9,
-        5,
-        8
+        8,
+        4,
+        10,
+        11
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1078,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1512,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1980
     },
     {
       "qid": "JKHY/2017/page_26.pdf-2",
       "retrieved": [
         1,
-        0,
         2,
+        0,
         3
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1283,
       "recall@4": 1.0,
-      "chars@4": 1742,
+      "chars@4": 1788,
       "recall@5": 1.0,
-      "chars@5": 1742
+      "chars@5": 1788
     },
     {
       "qid": "CMCSA/2015/page_112.pdf-4",
       "retrieved": [
-        2,
-        1,
         3,
-        6,
-        5
+        1,
+        2,
+        7,
+        9
       ],
       "recall@3": 0.5,
-      "chars@3": 1500,
+      "chars@3": 1185,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1672,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1955
     },
     {
       "qid": "ETR/2011/page_301.pdf-1",
       "retrieved": [
-        1,
         2,
-        9,
-        7,
-        4
+        1,
+        3,
+        5,
+        10
       ],
       "recall@3": 1.0,
-      "chars@3": 1466,
+      "chars@3": 963,
       "recall@4": 1.0,
-      "chars@4": 1966,
+      "chars@4": 1456,
       "recall@5": 1.0,
-      "chars@5": 2466
+      "chars@5": 1688
     },
     {
       "qid": "IPG/2008/page_72.pdf-3",
       "retrieved": [
-        2,
-        1,
         4,
-        8,
-        3
+        6,
+        2,
+        3,
+        10
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 1992,
-      "recall@5": 1.0,
-      "chars@5": 2492
+      "recall@3": 0.3333333333333333,
+      "chars@3": 1182,
+      "recall@4": 0.6666666666666666,
+      "chars@4": 1648,
+      "recall@5": 0.6666666666666666,
+      "chars@5": 2087
     },
     {
       "qid": "AWK/2012/page_117.pdf-4",
       "retrieved": [
-        4,
+        8,
+        7,
+        6,
         5,
-        0,
-        3,
-        6
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1285,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1434,
       "recall@5": 1.0,
-      "chars@5": 2443
+      "chars@5": 1873
     },
     {
       "qid": "LMT/2016/page_49.pdf-4",
       "retrieved": [
-        7,
-        8,
-        1,
-        4,
-        10
+        10,
+        11,
+        9,
+        2,
+        8
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1124,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1447,
       "recall@5": 1.0,
-      "chars@5": 2097
+      "chars@5": 1589
     },
     {
       "qid": "AWK/2017/page_148.pdf-1",
       "retrieved": [
-        0,
         1,
-        5,
-        4,
-        3
+        0,
+        2,
+        7,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 920,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1419,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1881
     },
     {
       "qid": "JPM/2018/page_90.pdf-2",
       "retrieved": [
-        13,
-        2,
-        8,
+        3,
+        14,
         15,
-        3
+        4,
+        9
       ],
-      "recall@3": 0.5,
-      "chars@3": 1500,
-      "recall@4": 0.5,
-      "chars@4": 2000,
-      "recall@5": 0.5,
-      "chars@5": 2500
+      "recall@3": 0.0,
+      "chars@3": 2191,
+      "recall@4": 0.0,
+      "chars@4": 2594,
+      "recall@5": 0.0,
+      "chars@5": 3086
     },
     {
       "qid": "JPM/2005/page_80.pdf-1",
       "retrieved": [
+        2,
         0,
         1,
-        10,
-        2,
-        4
+        3,
+        12
       ],
       "recall@3": 1.0,
-      "chars@3": 1492,
+      "chars@3": 1041,
       "recall@4": 1.0,
-      "chars@4": 1992,
+      "chars@4": 1465,
       "recall@5": 1.0,
-      "chars@5": 2492
+      "chars@5": 1829
     },
     {
       "qid": "GS/2012/page_189.pdf-3",
       "retrieved": [
-        4,
-        3,
-        6,
         5,
-        7
-      ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
-      "recall@5": 1.0,
-      "chars@5": 2500
-    },
-    {
-      "qid": "ALLE/2015/page_24.pdf-2",
-      "retrieved": [
         6,
-        4,
-        5,
-        2,
-        3
-      ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
-      "recall@5": 1.0,
-      "chars@5": 2500
-    },
-    {
-      "qid": "PPG/2018/page_85.pdf-4",
-      "retrieved": [
-        11,
-        10,
-        9,
+        7,
         3,
         8
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1266,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1626,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1967
+    },
+    {
+      "qid": "ALLE/2015/page_24.pdf-2",
+      "retrieved": [
+        7,
+        8,
+        4,
+        5,
+        6
+      ],
+      "recall@3": 1.0,
+      "chars@3": 1362,
+      "recall@4": 1.0,
+      "chars@4": 1787,
+      "recall@5": 1.0,
+      "chars@5": 2254
+    },
+    {
+      "qid": "PPG/2018/page_85.pdf-4",
+      "retrieved": [
+        14,
+        12,
+        10,
+        11,
+        4
+      ],
+      "recall@3": 1.0,
+      "chars@3": 1159,
+      "recall@4": 1.0,
+      "chars@4": 1528,
+      "recall@5": 1.0,
+      "chars@5": 1842
     },
     {
       "qid": "V/2008/page_180.pdf-2",
       "retrieved": [
-        3,
-        2,
-        0,
         4,
-        1
+        3,
+        5,
+        2,
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1118,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1478,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1957
     },
     {
       "qid": "C/2008/page_22.pdf-1",
       "retrieved": [
         6,
-        5,
-        8,
         7,
-        9
+        9,
+        10,
+        8
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1345,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1624,
       "recall@5": 1.0,
-      "chars@5": 2213
+      "chars@5": 2000
     },
     {
       "qid": "LMT/2016/page_49.pdf-1",
       "retrieved": [
-        7,
-        3,
         10,
-        1,
-        0
+        5,
+        13,
+        4,
+        9
       ],
       "recall@3": 0.0,
-      "chars@3": 1097,
+      "chars@3": 924,
       "recall@4": 0.0,
-      "chars@4": 1597,
-      "recall@5": 0.0,
-      "chars@5": 2097
+      "chars@4": 1323,
+      "recall@5": 1.0,
+      "chars@5": 1740
     },
     {
       "qid": "AON/2007/page_171.pdf-2",
       "retrieved": [
+        1,
+        2,
         0,
-        1
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 590,
+      "chars@3": 850,
       "recall@4": 1.0,
-      "chars@4": 590,
+      "chars@4": 867,
       "recall@5": 1.0,
-      "chars@5": 590
+      "chars@5": 867
     },
     {
       "qid": "HIG/2011/page_53.pdf-1",
       "retrieved": [
+        1,
         0,
-        4,
-        2,
-        5,
-        8
+        6,
+        3,
+        7
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 983,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1353,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1815
     },
     {
       "qid": "K/2006/page_52.pdf-1",
       "retrieved": [
-        8,
-        9,
+        13,
         12,
-        10,
-        5
+        16,
+        11,
+        14
       ],
       "recall@3": 0.6666666666666666,
-      "chars@3": 1239,
+      "chars@3": 1124,
       "recall@4": 0.6666666666666666,
-      "chars@4": 1739,
+      "chars@4": 1425,
       "recall@5": 0.6666666666666666,
-      "chars@5": 2239
+      "chars@5": 1849
     },
     {
       "qid": "ECL/2016/page_52.pdf-1",
       "retrieved": [
-        4,
         1,
-        8,
-        0,
-        3
+        4,
+        5,
+        10,
+        2
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "recall@3": 0.0,
+      "chars@3": 1450,
+      "recall@4": 0.0,
+      "chars@4": 1906,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2367
     },
     {
       "qid": "AMT/2014/page_160.pdf-2",
       "retrieved": [
+        8,
+        7,
+        9,
         5,
-        6,
-        4,
-        0,
-        3
+        6
       ],
       "recall@3": 1.0,
-      "chars@3": 1422,
+      "chars@3": 990,
       "recall@4": 1.0,
-      "chars@4": 1922,
+      "chars@4": 1438,
       "recall@5": 1.0,
-      "chars@5": 2422
+      "chars@5": 1635
     },
     {
       "qid": "AMAT/2013/page_37.pdf-1",
       "retrieved": [
         1,
-        0,
-        4,
         2,
-        3
+        0,
+        3,
+        5
       ],
       "recall@3": 0.0,
-      "chars@3": 1500,
+      "chars@3": 1151,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1651,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1940
     },
     {
       "qid": "ETR/2017/page_372.pdf-1",
       "retrieved": [
         2,
-        0,
         1,
-        4,
-        3
+        3,
+        0,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 922,
       "recall@4": 1.0,
-      "chars@4": 1641,
+      "chars@4": 1318,
       "recall@5": 1.0,
-      "chars@5": 2141
+      "chars@5": 1735
     },
     {
       "qid": "GS/2018/page_69.pdf-4",
       "retrieved": [
+        15,
+        14,
         13,
-        1,
-        12,
-        4,
-        8
+        5,
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 1161,
+      "chars@3": 855,
       "recall@4": 1.0,
-      "chars@4": 1661,
+      "chars@4": 1296,
       "recall@5": 1.0,
-      "chars@5": 2161
+      "chars@5": 1732
     },
     {
       "qid": "AON/2007/page_171.pdf-4",
       "retrieved": [
+        1,
+        2,
         0,
-        1
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 590,
+      "chars@3": 850,
       "recall@4": 1.0,
-      "chars@4": 590,
+      "chars@4": 867,
       "recall@5": 1.0,
-      "chars@5": 590
+      "chars@5": 867
     },
     {
       "qid": "BDX/2018/page_106.pdf-1",
       "retrieved": [
         5,
+        8,
+        6,
         4,
-        3,
-        2,
-        6
+        7
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "recall@3": 0.5,
+      "chars@3": 1226,
+      "recall@4": 0.5,
+      "chars@4": 1702,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2004
     },
     {
       "qid": "PPG/2006/page_42.pdf-4",
       "retrieved": [
-        7,
+        9,
         8,
+        10,
         4,
-        2,
-        10
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1211,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1671,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2163
     },
     {
       "qid": "KHC/2018/page_132.pdf-3",
       "retrieved": [
+        9,
         1,
-        4,
-        0,
         6,
-        2
+        7,
+        4
       ],
-      "recall@3": 0.0,
-      "chars@3": 1500,
-      "recall@4": 0.5,
-      "chars@4": 2000,
-      "recall@5": 0.5,
-      "chars@5": 2500
+      "recall@3": 0.5,
+      "chars@3": 933,
+      "recall@4": 1.0,
+      "chars@4": 1365,
+      "recall@5": 1.0,
+      "chars@5": 1824
     },
     {
       "qid": "CME/2017/page_40.pdf-1",
       "retrieved": [
         1,
-        2,
         0,
-        3
+        3,
+        2,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1164,
       "recall@4": 1.0,
-      "chars@4": 1615,
+      "chars@4": 1511,
       "recall@5": 1.0,
-      "chars@5": 1615
+      "chars@5": 1660
     },
     {
       "qid": "LMT/2012/page_73.pdf-3",
       "retrieved": [
-        0,
         1,
+        0,
         2,
-        5,
-        4
+        3,
+        6
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 991,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1361,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1848
     },
     {
       "qid": "JPM/2014/page_70.pdf-2",
       "retrieved": [
+        6,
         4,
         3,
-        1,
         2,
-        8
+        1
       ],
-      "recall@3": 0.0,
-      "chars@3": 1500,
+      "recall@3": 1.0,
+      "chars@3": 1247,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1713,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1893
     },
     {
       "qid": "ETR/2004/page_281.pdf-1",
       "retrieved": [
-        4,
+        6,
         5,
-        2,
         0,
-        6
+        7,
+        8
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
-      "recall@5": 1.0,
-      "chars@5": 2500
+      "recall@3": 0.6666666666666666,
+      "chars@3": 974,
+      "recall@4": 0.6666666666666666,
+      "chars@4": 1350,
+      "recall@5": 0.6666666666666666,
+      "chars@5": 1805
     },
     {
       "qid": "GS/2013/page_149.pdf-2",
       "retrieved": [
-        2,
-        1,
-        0,
         3,
-        7
+        2,
+        4,
+        5,
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1229,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1715,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2041
     },
     {
       "qid": "AMT/2016/page_125.pdf-3",
       "retrieved": [
-        1,
         3,
-        6,
         2,
+        4,
+        1,
         0
       ],
-      "recall@3": 0.5,
-      "chars@3": 1500,
+      "recall@3": 1.0,
+      "chars@3": 1252,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1402,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1860
     },
     {
       "qid": "DG/2010/page_136.pdf-1",
       "retrieved": [
-        3,
         5,
+        6,
+        8,
         4,
-        7,
-        6
+        7
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1151,
       "recall@4": 1.0,
-      "chars@4": 1553,
+      "chars@4": 1647,
       "recall@5": 1.0,
-      "chars@5": 2053
+      "chars@5": 1966
     },
     {
       "qid": "UPS/2012/page_32.pdf-3",
       "retrieved": [
-        1,
         2,
+        3,
+        4,
+        1,
         0
       ],
       "recall@3": 1.0,
-      "chars@3": 1467,
+      "chars@3": 1171,
       "recall@4": 1.0,
-      "chars@4": 1467,
+      "chars@4": 1376,
       "recall@5": 1.0,
-      "chars@5": 1467
+      "chars@5": 1835
     },
     {
       "qid": "CME/2017/page_40.pdf-2",
       "retrieved": [
+        2,
         1,
         0,
-        2,
-        3
+        3,
+        4
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
+      "recall@3": 0.3333333333333333,
+      "chars@3": 1098,
       "recall@4": 1.0,
-      "chars@4": 1615,
+      "chars@4": 1511,
       "recall@5": 1.0,
-      "chars@5": 1615
+      "chars@5": 1660
     },
     {
       "qid": "RL/2008/page_23.pdf-1",
       "retrieved": [
-        0,
-        1,
-        2,
         3,
-        6
+        1,
+        0,
+        2,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1082,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1447,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1856
     },
     {
       "qid": "LMT/2016/page_49.pdf-3",
       "retrieved": [
-        7,
+        10,
+        9,
+        11,
         8,
-        3,
-        1,
-        4
+        5
       ],
-      "recall@3": 0.0,
-      "chars@3": 1500,
-      "recall@4": 0.0,
-      "chars@4": 2000,
-      "recall@5": 0.0,
-      "chars@5": 2500
+      "recall@3": 1.0,
+      "chars@3": 1124,
+      "recall@4": 1.0,
+      "chars@4": 1266,
+      "recall@5": 1.0,
+      "chars@5": 1670
     },
     {
       "qid": "GS/2013/page_220.pdf-4",
       "retrieved": [
-        3,
-        1,
+        5,
+        4,
         2,
+        1,
         0
       ],
       "recall@3": 1.0,
-      "chars@3": 1381,
+      "chars@3": 1052,
       "recall@4": 1.0,
-      "chars@4": 1881,
+      "chars@4": 1460,
       "recall@5": 1.0,
-      "chars@5": 1881
+      "chars@5": 1787
     },
     {
       "qid": "ETR/2015/page_17.pdf-3",
       "retrieved": [
-        1,
-        2,
         3,
+        2,
+        1,
         4,
-        6
+        5
       ],
       "recall@3": 0.75,
-      "chars@3": 1500,
+      "chars@3": 1250,
       "recall@4": 0.75,
-      "chars@4": 2000,
-      "recall@5": 0.75,
-      "chars@5": 2281
+      "chars@4": 1655,
+      "recall@5": 1.0,
+      "chars@5": 2103
     },
     {
       "qid": "IP/2006/page_35.pdf-2",
       "retrieved": [
-        3,
         4,
-        8,
-        2,
-        0
+        5,
+        3,
+        6,
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 945,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1438,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1899
     },
     {
       "qid": "AMT/2007/page_127.pdf-1",
       "retrieved": [
+        9,
+        6,
         8,
-        7,
-        5,
-        10,
-        9
+        11,
+        13
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1040,
       "recall@4": 1.0,
-      "chars@4": 1798,
+      "chars@4": 1519,
       "recall@5": 1.0,
-      "chars@5": 2298
+      "chars@5": 1900
     },
     {
       "qid": "FBHS/2017/page_22.pdf-1",
       "retrieved": [
-        5,
         2,
         7,
-        3,
-        6
+        8,
+        9,
+        4
       ],
       "recall@3": 0.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
-      "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@3": 1104,
+      "recall@4": 0.0,
+      "chars@4": 1595,
+      "recall@5": 0.5,
+      "chars@5": 2028
     },
     {
       "qid": "ILMN/2008/page_86.pdf-3",
       "retrieved": [
+        7,
         5,
         6,
         3,
-        4,
-        1
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 938,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1419,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1863
     },
     {
       "qid": "MRO/2003/page_45.pdf-2",
       "retrieved": [
-        6,
+        7,
+        8,
         2,
-        3,
-        4,
-        5
+        6,
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1082,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1482,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1869
     },
     {
       "qid": "GS/2013/page_149.pdf-4",
       "retrieved": [
-        2,
         3,
-        0,
-        1,
-        7
+        2,
+        4,
+        5,
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1229,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1715,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2041
     },
     {
       "qid": "AMT/2012/page_50.pdf-1",
       "retrieved": [
         0,
-        1,
+        3,
+        4,
         2,
-        5,
-        4
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1622,
       "recall@4": 1.0,
-      "chars@4": 1916,
+      "chars@4": 2147,
       "recall@5": 1.0,
-      "chars@5": 2416
+      "chars@5": 2669
     },
     {
       "qid": "ETR/2008/page_298.pdf-2",
       "retrieved": [
-        2,
-        1,
+        3,
+        7,
         5,
-        4,
-        6
+        6,
+        2
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
-      "recall@5": 1.0,
-      "chars@5": 2500
+      "recall@3": 0.5,
+      "chars@3": 1133,
+      "recall@4": 0.5,
+      "chars@4": 1541,
+      "recall@5": 0.5,
+      "chars@5": 1849
     },
     {
       "qid": "ILMN/2008/page_86.pdf-1",
       "retrieved": [
+        7,
         5,
         6,
         4,
-        2,
-        3
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 938,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1382,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1878
     },
     {
       "qid": "ETR/2008/page_442.pdf-1",
       "retrieved": [
-        8,
-        5,
+        10,
+        6,
+        9,
         4,
-        3,
-        7
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1441,
+      "chars@3": 790,
       "recall@4": 1.0,
-      "chars@4": 1941,
+      "chars@4": 1212,
       "recall@5": 1.0,
-      "chars@5": 2441
+      "chars@5": 1630
     },
     {
       "qid": "STT/2014/page_54.pdf-2",
       "retrieved": [
+        1,
+        2,
         0
       ],
       "recall@3": 1.0,
@@ -1228,379 +1243,385 @@
     {
       "qid": "MO/2014/page_62.pdf-3",
       "retrieved": [
-        2,
+        6,
         0,
-        1,
         3,
-        4
+        1,
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1247,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1687,
       "recall@5": 1.0,
-      "chars@5": 2231
+      "chars@5": 2151
     },
     {
       "qid": "PPG/2018/page_85.pdf-3",
       "retrieved": [
-        9,
-        11,
+        14,
         10,
-        8,
-        3
+        12,
+        11,
+        4
       ],
-      "recall@3": 0.6666666666666666,
-      "chars@3": 1500,
-      "recall@4": 0.6666666666666666,
-      "chars@4": 2000,
-      "recall@5": 0.6666666666666666,
-      "chars@5": 2500
+      "recall@3": 1.0,
+      "chars@3": 1159,
+      "recall@4": 1.0,
+      "chars@4": 1528,
+      "recall@5": 1.0,
+      "chars@5": 1842
     },
     {
       "qid": "CDNS/2015/page_30.pdf-4",
       "retrieved": [
+        3,
         1,
-        2,
         0,
-        3
+        4,
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1193,
       "recall@4": 1.0,
-      "chars@4": 1671,
+      "chars@4": 1549,
       "recall@5": 1.0,
-      "chars@5": 1671
+      "chars@5": 1871
     },
     {
       "qid": "GS/2012/page_189.pdf-4",
       "retrieved": [
-        4,
-        3,
+        5,
         6,
-        2,
-        5
+        3,
+        7,
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1175,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1626,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1894
     },
     {
       "qid": "GIS/2019/page_68.pdf-2",
       "retrieved": [
-        8,
-        7,
-        6,
+        9,
         4,
-        0
+        7,
+        8,
+        5
       ],
       "recall@3": 0.0,
-      "chars@3": 1255,
-      "recall@4": 1.0,
-      "chars@4": 1755,
+      "chars@3": 1035,
+      "recall@4": 0.0,
+      "chars@4": 1533,
       "recall@5": 1.0,
-      "chars@5": 2255
+      "chars@5": 1891
     },
     {
       "qid": "VNO/2014/page_57.pdf-1",
       "retrieved": [
+        2,
+        0,
         1,
-        0
+        3
       ],
       "recall@3": 1.0,
-      "chars@3": 945,
+      "chars@3": 1089,
       "recall@4": 1.0,
-      "chars@4": 945,
+      "chars@4": 1090,
       "recall@5": 1.0,
-      "chars@5": 945
+      "chars@5": 1090
     },
     {
       "qid": "GS/2012/page_142.pdf-4",
       "retrieved": [
         2,
-        1,
-        0,
         3,
-        11
+        5,
+        0,
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1385,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1711,
       "recall@5": 1.0,
-      "chars@5": 2478
+      "chars@5": 2108
     },
     {
       "qid": "NCLH/2018/page_97.pdf-2",
       "retrieved": [
-        2,
         3,
-        1,
+        2,
         0,
-        5
+        1,
+        7
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1099,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1534,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1989
     },
     {
       "qid": "MRK/2013/page_125.pdf-4",
       "retrieved": [
-        3,
+        6,
         4,
-        1,
+        9,
         2,
-        0
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1107,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1337,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1773
     },
     {
       "qid": "K/2006/page_52.pdf-2",
       "retrieved": [
-        10,
+        14,
+        8,
+        13,
         12,
-        9,
-        6,
-        7
+        16
       ],
-      "recall@3": 1.0,
-      "chars@3": 1239,
+      "recall@3": 0.0,
+      "chars@3": 1056,
       "recall@4": 1.0,
-      "chars@4": 1739,
+      "chars@4": 1495,
       "recall@5": 1.0,
-      "chars@5": 2239
+      "chars@5": 1868
     },
     {
       "qid": "CB/2008/page_229.pdf-3",
       "retrieved": [
+        4,
         3,
         2,
         0,
-        1,
-        4
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1235,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1661,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2105
     },
     {
       "qid": "UAA/2016/page_42.pdf-4",
       "retrieved": [
-        0,
         1,
-        2
+        2,
+        3,
+        4,
+        5
       ],
       "recall@3": 1.0,
-      "chars@3": 1052,
+      "chars@3": 1363,
       "recall@4": 1.0,
-      "chars@4": 1052,
+      "chars@4": 1789,
       "recall@5": 1.0,
-      "chars@5": 1052
+      "chars@5": 1868
     },
     {
       "qid": "STT/2007/page_111.pdf-3",
       "retrieved": [
-        6,
+        7,
         2,
         1,
-        5,
-        4
+        0,
+        6
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1078,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1550,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1977
     },
     {
       "qid": "AWK/2012/page_117.pdf-1",
       "retrieved": [
-        4,
-        3,
+        8,
+        7,
+        6,
         5,
-        0,
-        6
+        9
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1285,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1434,
       "recall@5": 1.0,
-      "chars@5": 2443
+      "chars@5": 1730
     },
     {
       "qid": "AMAT/2018/page_33.pdf-2",
       "retrieved": [
-        2,
-        1,
         3,
-        0,
-        4
+        2,
+        4,
+        1,
+        0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1163,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1517,
       "recall@5": 1.0,
-      "chars@5": 2060
+      "chars@5": 1965
     },
     {
       "qid": "BLK/2014/page_120.pdf-1",
       "retrieved": [
-        10,
+        12,
+        13,
+        9,
         0,
-        8,
-        4,
-        9
+        10
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
-      "recall@4": 1.0,
-      "chars@4": 2000,
+      "recall@3": 0.25,
+      "chars@3": 918,
+      "recall@4": 0.25,
+      "chars@4": 1343,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1643
     },
     {
       "qid": "CMCSA/2008/page_36.pdf-2",
       "retrieved": [
-        4,
+        5,
         6,
-        9,
-        3,
-        7
+        4,
+        10,
+        11
       ],
-      "recall@3": 0.5,
-      "chars@3": 1500,
-      "recall@4": 0.5,
-      "chars@4": 2000,
-      "recall@5": 0.5,
-      "chars@5": 2500
+      "recall@3": 1.0,
+      "chars@3": 1232,
+      "recall@4": 1.0,
+      "chars@4": 1668,
+      "recall@5": 1.0,
+      "chars@5": 1924
     },
     {
       "qid": "CME/2010/page_69.pdf-1",
       "retrieved": [
-        1,
         0,
+        1,
         2,
-        4,
-        3
+        3,
+        6
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1358,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1657,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 2143
     },
     {
       "qid": "AMT/2012/page_118.pdf-1",
       "retrieved": [
-        2,
-        1,
-        4,
         3,
-        6
+        4,
+        2,
+        8,
+        1
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1242,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1612,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1855
     },
     {
       "qid": "MAS/2017/page_27.pdf-3",
       "retrieved": [
-        0,
-        1,
         2,
-        3
+        3,
+        1,
+        0,
+        4
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1215,
       "recall@4": 1.0,
-      "chars@4": 1600,
+      "chars@4": 1728,
       "recall@5": 1.0,
-      "chars@5": 1600
+      "chars@5": 1871
     },
     {
       "qid": "MAR/2018/page_43.pdf-1",
       "retrieved": [
-        7,
         9,
         8,
-        2,
-        6
+        10,
+        12,
+        11
       ],
       "recall@3": 1.0,
-      "chars@3": 1308,
+      "chars@3": 1477,
       "recall@4": 1.0,
-      "chars@4": 1808,
+      "chars@4": 1609,
       "recall@5": 1.0,
-      "chars@5": 2308
+      "chars@5": 2091
     },
     {
       "qid": "RSG/2015/page_98.pdf-1",
       "retrieved": [
-        3,
-        4,
+        6,
         5,
+        4,
         2,
         0
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1058,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1448,
       "recall@5": 1.0,
-      "chars@5": 2500
+      "chars@5": 1892
     },
     {
       "qid": "UPS/2007/page_49.pdf-3",
       "retrieved": [
-        2,
-        4,
         3,
-        8,
-        0
+        6,
+        5,
+        4,
+        7
       ],
-      "recall@3": 1.0,
-      "chars@3": 1500,
+      "recall@3": 0.5,
+      "chars@3": 1135,
       "recall@4": 1.0,
-      "chars@4": 1920,
+      "chars@4": 1618,
       "recall@5": 1.0,
-      "chars@5": 2420
+      "chars@5": 2103
     },
     {
       "qid": "GPN/2010/page_89.pdf-2",
       "retrieved": [
-        4,
+        6,
         5,
+        4,
         3,
-        2,
-        7
+        2
       ],
       "recall@3": 1.0,
-      "chars@3": 1500,
+      "chars@3": 1198,
       "recall@4": 1.0,
-      "chars@4": 2000,
+      "chars@4": 1672,
       "recall@5": 1.0,
-      "chars@5": 2145
+      "chars@5": 2051
     }
   ]
 }
