@@ -1,0 +1,1634 @@
+{
+  "name": "v0",
+  "created": "2026-10-05T22:18:13",
+  "seed": 42,
+  "settings": {
+    "llm_base_url": "http://localhost:1234/v1",
+    "llm_model": "meta-llama-3-8b-instruct",
+    "llm_timeout": 120.0,
+    "qdrant_url": null,
+    "qdrant_path": "./qdrant_data",
+    "collection": "finqa_fixed",
+    "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_strategy": "fixed",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "top_k": 3,
+    "data_path": "data/finqa_test.json"
+  },
+  "summary": {
+    "n": 100,
+    "recall@3": 0.8725,
+    "full@3": 0.81,
+    "recall@5": 0.9525,
+    "full@5": 0.91,
+    "recall@10": 0.9883333333333333,
+    "full@10": 0.97,
+    "retrieve_p50_ms": 37.52184999996189,
+    "retrieve_p95_ms": 44.023779999980654
+  },
+  "rows": [
+    {
+      "qid": "BLK/2015/page_124.pdf-1",
+      "retrieved": [
+        10,
+        9,
+        5,
+        7,
+        2,
+        1,
+        0,
+        4,
+        3,
+        12
+      ],
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ABMD/2012/page_79.pdf-2",
+      "retrieved": [
+        9,
+        6,
+        8,
+        5,
+        7,
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2014/page_165.pdf-3",
+      "retrieved": [
+        7,
+        4,
+        8,
+        3,
+        0,
+        5,
+        2,
+        6,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GIS/2018/page_110.pdf-1",
+      "retrieved": [
+        2,
+        1,
+        0,
+        6,
+        5,
+        3,
+        7,
+        4
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2016/page_23.pdf-3",
+      "retrieved": [
+        5,
+        6,
+        3,
+        1,
+        7,
+        0,
+        4,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CB/2010/page_103.pdf-1",
+      "retrieved": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "BKNG/2016/page_33.pdf-1",
+      "retrieved": [
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ZBH/2008/page_57.pdf-1",
+      "retrieved": [
+        8,
+        7,
+        9,
+        3,
+        2,
+        4,
+        10,
+        6,
+        11,
+        13
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AON/2018/page_87.pdf-3",
+      "retrieved": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        6,
+        7,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MSI/2008/page_69.pdf-3",
+      "retrieved": [
+        7,
+        6,
+        5,
+        8,
+        9,
+        4,
+        10,
+        1,
+        0,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ADI/2010/page_80.pdf-3",
+      "retrieved": [
+        7,
+        5,
+        6,
+        8,
+        4,
+        3,
+        0,
+        2,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ADBE/2008/page_89.pdf-3",
+      "retrieved": [
+        5,
+        0,
+        2,
+        6,
+        1,
+        4,
+        8,
+        7,
+        3
+      ],
+      "recall@3": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AWK/2013/page_122.pdf-2",
+      "retrieved": [
+        4,
+        3,
+        7,
+        5,
+        0,
+        2,
+        6,
+        1
+      ],
+      "recall@3": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2015/page_17.pdf-1",
+      "retrieved": [
+        1,
+        3,
+        6,
+        2,
+        4,
+        0,
+        5
+      ],
+      "recall@3": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "FIS/2012/page_48.pdf-1",
+      "retrieved": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "TMUS/2017/page_29.pdf-3",
+      "retrieved": [
+        6,
+        5,
+        7,
+        4,
+        8,
+        1,
+        0,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ADBE/1999/page_64.pdf-1",
+      "retrieved": [
+        2,
+        1,
+        3,
+        6,
+        5,
+        4,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "EOG/2018/page_75.pdf-1",
+      "retrieved": [
+        0,
+        3,
+        1,
+        6,
+        2,
+        8,
+        4,
+        7,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MSI/2007/page_70.pdf-1",
+      "retrieved": [
+        10,
+        9,
+        11,
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2016/page_150.pdf-1",
+      "retrieved": [
+        0,
+        5,
+        3,
+        4,
+        1,
+        8,
+        2,
+        7,
+        9,
+        6
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "PNC/2012/page_68.pdf-4",
+      "retrieved": [
+        11,
+        10,
+        4,
+        12,
+        0,
+        1,
+        5,
+        7,
+        2,
+        6
+      ],
+      "recall@3": 0.6666666666666666,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 0.6666666666666666
+    },
+    {
+      "qid": "GS/2014/page_74.pdf-1",
+      "retrieved": [
+        6,
+        4,
+        7,
+        5,
+        8,
+        1,
+        3,
+        2,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AAL/2014/page_15.pdf-2",
+      "retrieved": [
+        8,
+        9,
+        7,
+        5,
+        6,
+        3,
+        0,
+        1,
+        4,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CME/2010/page_123.pdf-5",
+      "retrieved": [
+        2,
+        3,
+        0,
+        1,
+        4,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MSI/2012/page_87.pdf-1",
+      "retrieved": [
+        6,
+        7,
+        9,
+        5,
+        8,
+        3,
+        2,
+        10,
+        4,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "JKHY/2017/page_26.pdf-2",
+      "retrieved": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CMCSA/2015/page_112.pdf-4",
+      "retrieved": [
+        2,
+        1,
+        3,
+        6,
+        5,
+        7,
+        8,
+        4,
+        0
+      ],
+      "recall@3": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2011/page_301.pdf-1",
+      "retrieved": [
+        1,
+        2,
+        9,
+        7,
+        4,
+        5,
+        6,
+        8,
+        0,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "IPG/2008/page_72.pdf-3",
+      "retrieved": [
+        2,
+        1,
+        4,
+        8,
+        3,
+        6,
+        7,
+        5,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AWK/2012/page_117.pdf-4",
+      "retrieved": [
+        4,
+        5,
+        0,
+        3,
+        6,
+        1,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "LMT/2016/page_49.pdf-4",
+      "retrieved": [
+        7,
+        8,
+        1,
+        4,
+        10,
+        6,
+        3,
+        9,
+        0,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AWK/2017/page_148.pdf-1",
+      "retrieved": [
+        0,
+        1,
+        5,
+        4,
+        3,
+        2,
+        6
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "JPM/2018/page_90.pdf-2",
+      "retrieved": [
+        13,
+        2,
+        8,
+        15,
+        3,
+        16,
+        6,
+        4,
+        14,
+        10
+      ],
+      "recall@3": 0.5,
+      "recall@5": 0.5,
+      "recall@10": 0.5
+    },
+    {
+      "qid": "JPM/2005/page_80.pdf-1",
+      "retrieved": [
+        0,
+        1,
+        10,
+        2,
+        4,
+        9,
+        3,
+        7,
+        6,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2012/page_189.pdf-3",
+      "retrieved": [
+        4,
+        3,
+        6,
+        5,
+        7,
+        2,
+        1,
+        8,
+        10,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ALLE/2015/page_24.pdf-2",
+      "retrieved": [
+        6,
+        4,
+        5,
+        2,
+        3,
+        7,
+        1,
+        0,
+        9,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "PPG/2018/page_85.pdf-4",
+      "retrieved": [
+        11,
+        10,
+        9,
+        3,
+        8,
+        12,
+        5,
+        2,
+        0,
+        4
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "V/2008/page_180.pdf-2",
+      "retrieved": [
+        3,
+        2,
+        0,
+        4,
+        1,
+        6,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "C/2008/page_22.pdf-1",
+      "retrieved": [
+        6,
+        5,
+        8,
+        7,
+        9,
+        3,
+        0,
+        2,
+        4,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "LMT/2016/page_49.pdf-1",
+      "retrieved": [
+        7,
+        3,
+        10,
+        1,
+        0,
+        8,
+        4,
+        2,
+        6,
+        9
+      ],
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AON/2007/page_171.pdf-2",
+      "retrieved": [
+        0,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "HIG/2011/page_53.pdf-1",
+      "retrieved": [
+        0,
+        4,
+        2,
+        5,
+        8,
+        1,
+        9,
+        7,
+        6,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "K/2006/page_52.pdf-1",
+      "retrieved": [
+        8,
+        9,
+        12,
+        10,
+        5,
+        4,
+        7,
+        6,
+        3,
+        2
+      ],
+      "recall@3": 0.6666666666666666,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 0.6666666666666666
+    },
+    {
+      "qid": "ECL/2016/page_52.pdf-1",
+      "retrieved": [
+        4,
+        1,
+        8,
+        0,
+        3,
+        7,
+        9,
+        5,
+        11,
+        6
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMT/2014/page_160.pdf-2",
+      "retrieved": [
+        5,
+        6,
+        4,
+        0,
+        3,
+        1,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMAT/2013/page_37.pdf-1",
+      "retrieved": [
+        1,
+        0,
+        4,
+        2,
+        3,
+        5
+      ],
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2017/page_372.pdf-1",
+      "retrieved": [
+        2,
+        0,
+        1,
+        4,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2018/page_69.pdf-4",
+      "retrieved": [
+        13,
+        1,
+        12,
+        4,
+        8,
+        9,
+        7,
+        10,
+        2,
+        11
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AON/2007/page_171.pdf-4",
+      "retrieved": [
+        0,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "BDX/2018/page_106.pdf-1",
+      "retrieved": [
+        5,
+        4,
+        3,
+        2,
+        6,
+        1,
+        0,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "PPG/2006/page_42.pdf-4",
+      "retrieved": [
+        7,
+        8,
+        4,
+        2,
+        10,
+        9,
+        3,
+        6,
+        0,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "KHC/2018/page_132.pdf-3",
+      "retrieved": [
+        1,
+        4,
+        0,
+        6,
+        2,
+        5,
+        7,
+        3
+      ],
+      "recall@3": 0.0,
+      "recall@5": 0.5,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CME/2017/page_40.pdf-1",
+      "retrieved": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "LMT/2012/page_73.pdf-3",
+      "retrieved": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3,
+        10,
+        9,
+        6,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "JPM/2014/page_70.pdf-2",
+      "retrieved": [
+        4,
+        3,
+        1,
+        2,
+        8,
+        6,
+        12,
+        7,
+        11,
+        9
+      ],
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2004/page_281.pdf-1",
+      "retrieved": [
+        4,
+        5,
+        2,
+        0,
+        6,
+        7,
+        1,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2013/page_149.pdf-2",
+      "retrieved": [
+        2,
+        1,
+        0,
+        3,
+        7,
+        8,
+        4,
+        9,
+        10,
+        5
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMT/2016/page_125.pdf-3",
+      "retrieved": [
+        1,
+        3,
+        6,
+        2,
+        0,
+        4,
+        5,
+        10,
+        7,
+        9
+      ],
+      "recall@3": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "DG/2010/page_136.pdf-1",
+      "retrieved": [
+        3,
+        5,
+        4,
+        7,
+        6,
+        1,
+        2,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "UPS/2012/page_32.pdf-3",
+      "retrieved": [
+        1,
+        2,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CME/2017/page_40.pdf-2",
+      "retrieved": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "RL/2008/page_23.pdf-1",
+      "retrieved": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        5,
+        4,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "LMT/2016/page_49.pdf-3",
+      "retrieved": [
+        7,
+        8,
+        3,
+        1,
+        4,
+        10,
+        0,
+        6,
+        2,
+        9
+      ],
+      "recall@3": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2013/page_220.pdf-4",
+      "retrieved": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2015/page_17.pdf-3",
+      "retrieved": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        5,
+        0
+      ],
+      "recall@3": 0.75,
+      "recall@5": 0.75,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "IP/2006/page_35.pdf-2",
+      "retrieved": [
+        3,
+        4,
+        8,
+        2,
+        0,
+        1,
+        7,
+        6,
+        10,
+        9
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMT/2007/page_127.pdf-1",
+      "retrieved": [
+        8,
+        7,
+        5,
+        10,
+        9,
+        3,
+        2,
+        6,
+        4,
+        1
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "FBHS/2017/page_22.pdf-1",
+      "retrieved": [
+        5,
+        2,
+        7,
+        3,
+        6,
+        1,
+        4,
+        0,
+        8,
+        9
+      ],
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ILMN/2008/page_86.pdf-3",
+      "retrieved": [
+        5,
+        6,
+        3,
+        4,
+        1,
+        2,
+        0,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MRO/2003/page_45.pdf-2",
+      "retrieved": [
+        6,
+        2,
+        3,
+        4,
+        5,
+        1,
+        0,
+        7,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2013/page_149.pdf-4",
+      "retrieved": [
+        2,
+        3,
+        0,
+        1,
+        7,
+        8,
+        5,
+        4,
+        10,
+        9
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMT/2012/page_50.pdf-1",
+      "retrieved": [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2008/page_298.pdf-2",
+      "retrieved": [
+        2,
+        1,
+        5,
+        4,
+        6,
+        3,
+        0,
+        7,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ILMN/2008/page_86.pdf-1",
+      "retrieved": [
+        5,
+        6,
+        4,
+        2,
+        3,
+        0,
+        1,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "ETR/2008/page_442.pdf-1",
+      "retrieved": [
+        8,
+        5,
+        4,
+        3,
+        7,
+        1,
+        6,
+        0,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "STT/2014/page_54.pdf-2",
+      "retrieved": [
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MO/2014/page_62.pdf-3",
+      "retrieved": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "PPG/2018/page_85.pdf-3",
+      "retrieved": [
+        9,
+        11,
+        10,
+        8,
+        3,
+        5,
+        2,
+        12,
+        0,
+        4
+      ],
+      "recall@3": 0.6666666666666666,
+      "recall@5": 0.6666666666666666,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CDNS/2015/page_30.pdf-4",
+      "retrieved": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2012/page_189.pdf-4",
+      "retrieved": [
+        4,
+        3,
+        6,
+        2,
+        5,
+        7,
+        1,
+        10,
+        0,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GIS/2019/page_68.pdf-2",
+      "retrieved": [
+        8,
+        7,
+        6,
+        4,
+        0,
+        2,
+        5,
+        3,
+        1
+      ],
+      "recall@3": 0.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "VNO/2014/page_57.pdf-1",
+      "retrieved": [
+        1,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GS/2012/page_142.pdf-4",
+      "retrieved": [
+        2,
+        1,
+        0,
+        3,
+        11,
+        4,
+        8,
+        7,
+        6,
+        10
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "NCLH/2018/page_97.pdf-2",
+      "retrieved": [
+        2,
+        3,
+        1,
+        0,
+        5,
+        4,
+        6,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MRK/2013/page_125.pdf-4",
+      "retrieved": [
+        3,
+        4,
+        1,
+        2,
+        0,
+        6,
+        7,
+        10,
+        5,
+        9
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "K/2006/page_52.pdf-2",
+      "retrieved": [
+        10,
+        12,
+        9,
+        6,
+        7,
+        8,
+        5,
+        4,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CB/2008/page_229.pdf-3",
+      "retrieved": [
+        3,
+        2,
+        0,
+        1,
+        4,
+        9,
+        5,
+        6,
+        8,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "UAA/2016/page_42.pdf-4",
+      "retrieved": [
+        0,
+        1,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "STT/2007/page_111.pdf-3",
+      "retrieved": [
+        6,
+        2,
+        1,
+        5,
+        4,
+        0,
+        7,
+        3,
+        8
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AWK/2012/page_117.pdf-1",
+      "retrieved": [
+        4,
+        3,
+        5,
+        0,
+        6,
+        1,
+        2
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMAT/2018/page_33.pdf-2",
+      "retrieved": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "BLK/2014/page_120.pdf-1",
+      "retrieved": [
+        10,
+        0,
+        8,
+        4,
+        9,
+        5,
+        3,
+        2,
+        7,
+        11
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CMCSA/2008/page_36.pdf-2",
+      "retrieved": [
+        4,
+        6,
+        9,
+        3,
+        7,
+        8,
+        10,
+        0,
+        5,
+        2
+      ],
+      "recall@3": 0.5,
+      "recall@5": 0.5,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "CME/2010/page_69.pdf-1",
+      "retrieved": [
+        1,
+        0,
+        2,
+        4,
+        3,
+        5,
+        7,
+        6,
+        8,
+        9
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "AMT/2012/page_118.pdf-1",
+      "retrieved": [
+        2,
+        1,
+        4,
+        3,
+        6,
+        5,
+        7,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MAS/2017/page_27.pdf-3",
+      "retrieved": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "MAR/2018/page_43.pdf-1",
+      "retrieved": [
+        7,
+        9,
+        8,
+        2,
+        6,
+        3,
+        4,
+        1,
+        5,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "RSG/2015/page_98.pdf-1",
+      "retrieved": [
+        3,
+        4,
+        5,
+        2,
+        0,
+        6,
+        1,
+        8,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "UPS/2007/page_49.pdf-3",
+      "retrieved": [
+        2,
+        4,
+        3,
+        8,
+        0,
+        1,
+        5,
+        6,
+        7
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    },
+    {
+      "qid": "GPN/2010/page_89.pdf-2",
+      "retrieved": [
+        4,
+        5,
+        3,
+        2,
+        7,
+        1,
+        6,
+        0
+      ],
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0
+    }
+  ]
+}
